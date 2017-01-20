@@ -5,7 +5,7 @@
         {{this.burger_name}}
 
         <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="devoured" value="true">
+          <input type="hidden" name="devoured" value="1">
           <button type="submit">DEVOUR!</button>
         </form>
 
@@ -23,7 +23,7 @@
         {{this.burger_name}}
 
         <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="devoured" value="false">
+          <input type="hidden" name="devoured" value="0">
           <button type="submit">Regurgitate</button>
         </form>
 
@@ -37,7 +37,8 @@
 
   <div class="form-group">
     <label for="burg">Burger Name:</label>
-    <input type="textarea" id="burg" name="name">
+    <textarea id="burg" name="burger_name" rows="2" cols="40"></textarea>
+    <input type="hidden" name="devoured" value="0">
   </div>
 
   <button type="submit">Add Burger</button>

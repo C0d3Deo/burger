@@ -14,7 +14,7 @@ var burger = {
 	},
 
 	update: function(colProps, whereVar, callback) {
-		orm.update("burgers", colProps, whereVar, function(res) {
+		orm.updateOne("burgers", colProps, whereVar, function(res) {
 			callback(res);
 		});
 	}
